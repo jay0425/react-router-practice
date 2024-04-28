@@ -4,11 +4,12 @@ import { Link, useNavigate } from 'react-router-dom';
 const Homepage = () => {
   const navigate = useNavigate();
   const goProductPage = () => {
-    navigate('products?q=pants');
+    navigate('products?q=pants&number=1');
   };
   return (
     <div>
       <h1>Homepage</h1>
+      <Link to="/about">Go to about page</Link>
       <Link to="/about">Go to about page</Link>
       <button onClick={goProductPage}>go to product page</button>
     </div>
